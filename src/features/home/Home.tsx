@@ -7,14 +7,13 @@ import OfferCard from "@/shared/OfferCard";
 // Others
 import { useAppDispatch, useAppSelector } from "@/app/hooks";
 import { fetchOffers } from "./slice/api";
-import { selectOfferData, selectOfferDataStatus } from "./slice/selectors";
+import { selectOfferData } from "./slice/selectors";
 
 // Styles
 import { ListWrapper } from "./style";
 
 const Home = () => {
   const offerData = useAppSelector(selectOfferData);
-  const offerDataStatus = useAppSelector(selectOfferDataStatus);
 
   const dispatch = useAppDispatch();
 
