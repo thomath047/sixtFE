@@ -22,8 +22,6 @@ const Home = () => {
     dispatch(fetchOffers());
   }, [dispatch]);
 
-  console.log(offerData)
-
   return (
     <ListWrapper>
       {offerData?.map((carData: any) => (

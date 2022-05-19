@@ -1,5 +1,9 @@
-import { colors } from '@/assets/colors'
+// Core
 import styled from 'styled-components'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+// Styles
+import { colors } from '@/assets/colors'
 
 export const CardWrapper = styled.div`
     position: relative;
@@ -44,7 +48,7 @@ export const CardDetails = styled.div`
     padding: 20px;
 `
 
-export const Img = styled.img`
+export const Img = styled(LazyLoadImage)`
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -55,6 +59,9 @@ export const H1 = styled.h1`
     font-weight: 500;
     font-size: 1.4rem;
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 `
 export const P = styled.p`
    color: white;
